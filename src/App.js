@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import Accordion from './BootstrapAccordionComponent/Accordion'
+import InstallBootstrap from './InstallBootstrap'
+import Card from './BootstrapCardComponent/Card.jsx'
+import './index.css'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      {/* install and using bootstrap */}
+      <section style={{ padding: '15px 40px' }}>
+        <InstallBootstrap />
+      </section>
+
+      {/* Using Bootstrap Accordion components */}
+      <section style={{ display: 'grid', justifyContent: 'center' }}>
+        <Accordion />
+      </section>
+
+      {/* Bootstrap Card component */}
+      <section style={{ padding: '30px 40px' }}>
+        <Card />
+      </section>
+    </>
+  )
 }
 
-export default App;
+export default App
